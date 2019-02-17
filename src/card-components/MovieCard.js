@@ -28,7 +28,6 @@ const posterMap = {
 }
 
 export default class MovieCard extends Component {
-
   render() {
     return (
       <div className="movie-card">
@@ -39,7 +38,7 @@ export default class MovieCard extends Component {
           genres={this.props.genres}
         />
       </div>
-    )
+    );
   }
 }
 
