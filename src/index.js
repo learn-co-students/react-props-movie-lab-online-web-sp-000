@@ -4,3 +4,4 @@ import './index.css';
 import MovieShowcase from './MovieShowcase';
 
 ReactDOM.render(<MovieShowcase />, document.getElementById('root'));
+not same
