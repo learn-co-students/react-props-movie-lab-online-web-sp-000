@@ -4,14 +4,23 @@ import movieData from './data.js'
 
 export default class MovieShowcase extends Component {
 
-  generateMovieCards = () => {
-    // map over your movieData array and return the correct 
+  generateMovieCards = () => {debugger
+    return movieData.map((movie) => 
+    {debugger
+      this.props.title = movie.title,
+      this.props.IMDBRting = movie.IMDBRating,
+      this.props.genres = movie.genres,
+      this.props.poster = movie.poster
+    }) 
   }
 
   render() {
     return (
       <div id="movie-showcase">
-        {this.generateMovieCards()}
+        {this.generateMovieCards().map((movie, index) => {
+        return (
+          movie
+        )})}
       </div>
     )
   }
