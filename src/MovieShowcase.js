@@ -4,23 +4,17 @@ import movieData from './data.js'
 
 export default class MovieShowcase extends Component {
 
-  generateMovieCards = () => {debugger
+  generateMovieCards = () => {
     return movieData.map((movie) => 
-    {debugger
-      this.props.title = movie.title,
-      this.props.IMDBRting = movie.IMDBRating,
-      this.props.genres = movie.genres,
-      this.props.poster = movie.poster
+    {
+      return <MovieCard title = {movie.title} IMDBRating = {movie.IMDBRating} genres = {movie.genres} poster = {movie.poster}></MovieCard>
     }) 
   }
 
   render() {
     return (
       <div id="movie-showcase">
-        {this.generateMovieCards().map((movie, index) => {
-        return (
-          movie
-        )})}
+        {this.generateMovieCards()}
       </div>
     )
   }
