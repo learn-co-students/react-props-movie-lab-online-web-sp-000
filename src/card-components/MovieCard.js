@@ -47,6 +47,7 @@ MovieCard.defaultProps = {
 	IMDBRating: null,
 	genres: ['No Genre(s) Found'],
 	poster: 'default'
+  // does this really work??
 };
 
 // export default class MovieCard extends Component {
@@ -65,8 +66,8 @@ MovieCard.defaultProps = {
 //
 // // Don't forget your default props!
 // MovieCard.defaultProps = {
-//   'poster' : posterMap['default'],
-//   'title' : "unknown",
-//   'rating' : null,
-//   'genres' : ['No Genre(s) Found']
+//   poster : posterMap['default'],
+//   title : "unknown",
+//   rating : null,
+//   genres : ['No Genre(s) Found']
 // }
