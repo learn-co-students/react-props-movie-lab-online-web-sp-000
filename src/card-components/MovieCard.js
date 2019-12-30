@@ -33,11 +33,31 @@ export default class MovieCard extends Component {
     return (
       <div className="movie-card">
         {/* which component should receive which props? */}
-        <CardFront />
-        <CardBack />
+        <CardFront poster={posterMap[this.props.poster]} />
+        <CardBack 
+          title={this.props.title} 
+          IMDBRating={this.props.IMDBRating} 
+          genres={this.props.genres}/>
       </div>
     )
   }
 }
 
 // Don't forget your default props!
+MovieCard.defaultProps = {
+  title: 'unknown',
+  IMDBRating: null,
+  genres: ['No Genre(s) Found'],
+  poster: 'default'
+}
+
+
+// CardBack
+// In this component, you will need to render the title, genres and IMDBRating.
+
+// For genres, join each genre together into string with commas separating each.
+
+// For IMDBRating, you will need to finish writing the method generateRatingElement(), which should do the following:
+
+// if the IMDBRating prop is null, return an <h4> with the contents 'No Rating Found'
+// otherwise, return <img src={imgMapper[prop]} alt="" /> (using the correct prop)
