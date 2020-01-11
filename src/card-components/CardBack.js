@@ -12,7 +12,7 @@ export default class CardBack extends Component {
 
   generateRatingElement = (rating) => {
     // implement meeeee! See the readme for instructions
-    return rating? <img src={imgMapper[rating]} alt="" /> : <h4>with the contents 'No Rating Found'</h4>
+    return rating? <img src={imgMapper[rating]} alt="" /> : <h4>no rating found</h4>
   }
 
   render() {
@@ -24,7 +24,7 @@ export default class CardBack extends Component {
          {this.generateRatingElement(rating)/* your rating element should go here -- you can invoke methods within JSX, à la: this.myMethod() */ }
           
          <span />
-         <h5 className="genres">{this.props.genres.join(',')}</h5>
+         <h5 className="genres">{this.props.genres.join(', ')}</h5>
       </div>
     )
   }
