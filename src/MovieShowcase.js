@@ -5,7 +5,7 @@ import movieData from './data.js'
 export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
-    // map over your movieData array and return an array of the correct JSX
+    return movieData.map((item, index) => <MovieCard key={index} {...item}/>) //WHY spread operator here? "The spread operator lets you essentially drop an array in and get its values." How could I write without?
   }
 
   render() {
