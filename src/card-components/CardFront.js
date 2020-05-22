@@ -9,4 +9,4 @@ export default class CardFront extends Component {
     )
   }
 }
-style={{backgroundImage: `url(${this.props.poster})`}} //! should this have remained 'prop', as well as the one above?
+//style={{backgroundImage: `url(${prop})`}} //! should this have remained 'prop', as well as the one above?
