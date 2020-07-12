@@ -30,14 +30,29 @@ const posterMap = {
 export default class MovieCard extends Component {
 
   render() {
+    const imageFile = posterMap[this.props.poster]
+   
+    
     return (
+      
       <div className="movie-card">
-        {/* which component should receive which props? */}
-        <CardFront />
-        <CardBack />
+      
+        
+        <CardFront poster={imageFile} /> 
+        <CardBack title={this.props.title} genres={this.props.genres} IMDBRating={this.props.IMDBRating}/>
       </div>
     )
   }
 }
 
-// Don't forget your default props!
+MovieCard.defaultProps= {
+  title:'unknown',
+  IMDBRating:null,
+  genres:['No Genre(s) Found'],
+  poster:'default'
+}
+// this is the default props if we get missing data from our Movie card 
+// it should not break to all application Thats why we are setting default value 
+// we can put empty strings or empty array or null for number. we should put something that 
+// when we iterate key or value object it should not give us error and broke the application 
+
