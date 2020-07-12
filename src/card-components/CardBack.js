@@ -12,10 +12,14 @@ export default class CardBack extends Component {
 
   generateRatingElement = () => {
     const Imbd = [this.props.IMDBRating]
-   if (this.props.IMDBRating = null) {
-      <h4> 'No Rating Found' </h4>
+   if (this.props.IMDBRating === null) {
+      return (
+        <h4>no rating found</h4>
+      )
    }else{
+    return (
     <img src={Imbd} alt="" />
+    )
    }
   }
 
@@ -24,7 +28,7 @@ export default class CardBack extends Component {
       <div className="card-back">
         <h3 className="title">{this.props.title}</h3>
         <span />
-        generateRatingElement()
+        {this.generateRatingElement()}
         <span />
         <h5 className="genres">{this.props.genres.join(', ')}</h5>
       </div>
