@@ -17,7 +17,7 @@ const movieData = [
     genres: ['thriller', 'romance'],
     poster: 'chromeboi'
   },
-  
+
   {
     title: 'Escape from VIM',
     IMDBRating: 0,
@@ -53,7 +53,7 @@ const movieData = [
     IMDBRating: 5,
     genres: ['crime', 'period piece'],
     poster: 'the-trash-man'
-  },
+  }
 ]
 
 export default movieData
