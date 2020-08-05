@@ -6,12 +6,11 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     return movieData.map((data, idx) => 
-    
     <MovieCard key={idx} {...data} />);
   }
 
+
   render() {
-    console.log(this.props)
     return (
       <div id="movie-showcase">
         {this.generateMovieCards()}
@@ -19,3 +18,4 @@ export default class MovieShowcase extends Component {
     )
   }
 }
+
