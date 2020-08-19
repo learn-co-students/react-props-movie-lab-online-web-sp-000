@@ -12,9 +12,11 @@ export default class CardBack extends Component {
 
   generateRatingElement = () => {
     // implement meeeee! See the readme for instructions
+
   }
 
   render() {
+    console.log(this.props.content)
     return (
       <div className="card-back">
         <h3 className="title"></h3>
