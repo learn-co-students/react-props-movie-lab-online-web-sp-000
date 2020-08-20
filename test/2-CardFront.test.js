@@ -11,8 +11,8 @@ import CardFront from '../src/card-components/CardFront'
 describe('<CardFront />', () => {
   
   it('uses the poster prop as a background image, rendering only the necessary HTML', () => {
-    const cardFront = shallow(<CardFront poster="you spin me right round"/>)
-    expect(cardFront.html()).to.equal('<div class="card-front" style="background-image:url(you spin me right round)"></div>')
+    const cardFront = shallow(<CardFront poster="undefined"/>)
+    expect(cardFront.html()).to.equal('<div class="card-front" style="background-image:url(undefined)"></div>')
   })
 
 })
