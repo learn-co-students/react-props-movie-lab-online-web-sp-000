@@ -11,7 +11,4 @@ export default class CardFront extends Component {
   }
 }
 
-CardFront.defaultProps = {
-  poster: "default"
-}
 
