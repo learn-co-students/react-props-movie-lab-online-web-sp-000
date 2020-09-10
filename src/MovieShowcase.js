@@ -11,7 +11,6 @@ export default class MovieShowcase extends Component {
     return movieData.map(movie => {
       return (
         <MovieCard title={movie.title}
-                  key = {movie.title}
                   IMDBRating={movie.IMDBRating}
                   genres={movie.genres}
                   poster={movie.poster}/>
