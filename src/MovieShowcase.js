@@ -9,7 +9,7 @@ export default class MovieShowcase extends Component {
     // console.log(movieData);
 
     // ! passing nine different props to MovieCard
-    return movieData.map(movie => <MovieCard movie={movie} poster={movie.poster} title={movie.title} genres={movie.genres} />)
+    return movieData.map(movie => <MovieCard poster={movie.poster} title={movie.title} genres={movie.genres} IMDBRating={movie.IMDBRating}/>)
   }
 
   render() {
