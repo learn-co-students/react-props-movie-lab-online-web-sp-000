@@ -39,7 +39,7 @@ export default class MovieCard extends Component {
       <div className="movie-card">
         {/* which component should receive which props? */}
         {/* MovieCard is passing ten arrays to CardFront */}
-        <CardFront image={this.generateInnerJSX()} />
+        <CardFront poster={this.generateInnerJSX()} />
         <CardBack title={this.props.title} genres={this.props.genres} IMDBRating={this.props.IMDBRating} />
       </div>
     )
