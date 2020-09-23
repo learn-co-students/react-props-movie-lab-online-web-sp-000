@@ -6,6 +6,10 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     // map over your movieData array and return an array of the correct JSX
+    // console.log(movieData);
+
+    // ! passing nine different props to MovieCard
+    return movieData.map(movie => <MovieCard movie={movie} poster={movie.poster} title={movie.title} genres={movie.genres} />)
   }
 
   render() {
@@ -16,3 +20,4 @@ export default class MovieShowcase extends Component {
     )
   }
 }
+
