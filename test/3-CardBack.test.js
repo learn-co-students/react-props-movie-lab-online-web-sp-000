@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() })
 import CardBack from '../src/card-components/CardBack'
 
 
-describe('<CardBack />', () => {
+describe('<CardBack />', () => { 
   
   const genres = [
     "Never gonna give you up",
