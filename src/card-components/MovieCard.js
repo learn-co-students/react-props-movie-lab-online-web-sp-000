@@ -36,7 +36,7 @@ export default class MovieCard extends Component {
         <CardBack 
         title={this.props.title}
         IMDBRating={this.props.IMDBRating}
-        genre={this.props.genre}
+        genres={this.props.genres}
         />
       </div>
     )
