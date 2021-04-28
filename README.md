@@ -53,7 +53,7 @@ the end of this file, the data is set up to be exported and in
 `src/MovieShowcase.js`, we can see that this data gets imported in at the top:
 
 ```js
-import movieData from './data.js'
+import movieData from "./data.js";
 ```
 
 The `MovieShowcase` component, then, has access to `movieData`. We want to take this
@@ -66,24 +66,19 @@ return a single JSX element. That single JSX element, however, can contain other
 elements. So, for instance, the component below renders valid JSX:
 
 ```js
-import React from 'react';
+import React from "react";
 
 class App extends React.Component {
-
   generateInnerJSX = () => {
     return (
       <ul>
         <li>Hello</li>
         <li>Goodbye</li>
       </ul>
-    )
-  }
+    );
+  };
   render() {
-    return (
-      <div>
-        {this.generateInnerJSX()}
-      </div>
-    )
+    return <div>{this.generateInnerJSX()}</div>;
   }
 }
 
@@ -95,23 +90,15 @@ elements in an _array_. So instead of having to wrap the `li` elements above in
 a `ul` element, we could write:
 
 ```js
-import React from 'react';
+import React from "react";
 
 class App extends React.Component {
-
   generateInnerJSX = () => {
-    return [
-      <li>Hello</li>,
-      <li>Goodbye</li>
-    ]
-  }
+    return [<li>Hello</li>, <li>Goodbye</li>];
+  };
 
   render() {
-    return (
-      <div>
-        {this.generateInnerJSX()}
-      </div>
-    )
+    return <div>{this.generateInnerJSX()}</div>;
   }
 }
 
@@ -144,31 +131,27 @@ class App extends React.Component {
 
 export default App;
 ```
+
 Let's see another example. Suppose you have a component called `List` instead of an `li`.
 We can also map through an array of data and return an array of JSX to dynamically create
 our `List` components. We can even pass the strings `Hello` and `Goodbye` as props:
 
 ```js
-
-class List extends React.Component{
-  render(){
-    return <li>{this.props.content}</li>
+class List extends React.Component {
+  render() {
+    return <li>{this.props.content}</li>;
   }
 }
 
-const LIST = ["Hello", "Goodbye"]
+const LIST = ["Hello", "Goodbye"];
 
 class App extends React.Component {
   generateInnerJSX = () => {
-    return LIST.map(item => <List content={item}/>)
-  }
+    return LIST.map((item) => <List content={item} />);
+  };
 
   render() {
-    return (
-      <div>
-        {this.generateInnerJSX()}
-      </div>
-    )
+    return <div>{this.generateInnerJSX()}</div>;
   }
 }
 ```
@@ -179,16 +162,10 @@ The above code is the same as below:
 class App extends React.Component {
   render() {
     return (
-      <div>
-        {[
-          <List content={"Hello"} />,
-          <List content={"Goodbye"} />
-        ]}
-      </div>
-    )
+      <div>{[<List content={"Hello"} />, <List content={"Goodbye"} />]}</div>
+    );
   }
 }
-
 ```
 
 We are dynamically generating an _array_ of JSX to render inside our `<div>` tag.
@@ -202,12 +179,12 @@ additional information.
 If everything is set up properly in `MovieShowcase`, running the application
 will produce a page with 9 empty squares popping out. These are the nine
 `MovieCard` components being rendered in `MovieShowcase` and if you click one and
-hold your mouse button down, you'll see the card animate and 'turn over.' 
+hold your mouse button down, you'll see the card animate and 'turn over.'
 
 If we were to place `console.log(this.props)` in the `MovieCard` component at
 the beginning of `render()`, we'd see that each `MovieCard` contains different
 props. Your task here is to pass props to the two child components of
-`MovieCard`, `CardFront` and `CardBack`. 
+`MovieCard`, `CardFront` and `CardBack`.
 
 `CardBack` will display the title, genres and IMDB rating. `CardFront` will only
 be used to display the movie poster. `CardFront` should receive a `poster`
@@ -256,7 +233,7 @@ style={{backgroundImage: `url(${prop})`}}
 ###### `CardBack`
 
 In this component, you will need to render the `title`, `genres` and
-`IMDBRating`. 
+`IMDBRating`.
 
 For `genres`, join each genre together into string with commas separating each.
 
@@ -264,7 +241,7 @@ For `IMDBRating`, you will need to finish writing the method
 `generateRatingElement()`, which should do the following:
 
 - if the `IMDBRating` prop is `null`, return an `<h4>` with the contents `'No Rating Found'`
-- otherwise, return `<img src={imgMapper[prop]} alt="" />` (using the correct
+- otherwise, return `npm audit fix --force` (using the correct
   prop)
 
 Just like the posters in `MovieCard`, we've provided image assets and an object, `imgMapper`,
