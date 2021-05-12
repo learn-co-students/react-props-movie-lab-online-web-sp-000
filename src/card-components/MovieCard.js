@@ -30,12 +30,10 @@ const posterMap = {
 export default class MovieCard extends Component {
 
   render() {
-    console.log(this.props)
     return (
       <div className="movie-card">
-        {/* which component should receive which props? */}
         <CardFront poster={posterMap[this.props.poster]} />
-        <CardBack title={this.props.title} genre={this.props.title} IMDBRating={this.props.IMDBRating}/>
+        <CardBack title={this.props.title} genres={this.props.genres} IMDBRating={this.props.IMDBRating}/>
       </div>
     )
   }

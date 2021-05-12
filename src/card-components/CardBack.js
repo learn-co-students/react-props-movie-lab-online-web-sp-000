@@ -17,6 +17,7 @@ export default class CardBack extends Component {
     return <h4>No Rating Found</h4>
   }
 
+
   render() {
     return (
       <div className="card-back">
@@ -24,7 +25,6 @@ export default class CardBack extends Component {
         <span />
         {this.generateRatingElement()}
         <span />
-        console.log(this.props.genres)
         <h5 className="genres">{this.props.genres.join(', ')}</h5>
       </div>
     )
