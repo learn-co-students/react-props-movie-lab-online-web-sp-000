@@ -29,11 +29,12 @@ export default class CardBack extends Component {
       <div className="card-back">
         <h3 className="title"></h3>
         <span />
-        <h4>{this.props.title}</h4>
-        {this.generateRatingElement}
+        <h4>{this.props.title}
+        {this.generateRatingElement()}
+        </h4>
         <span />
         <h5 className="genres">
-          {this.generateGenreElement}
+          {this.generateGenreElement()}
         </h5>
       </div>
     )
