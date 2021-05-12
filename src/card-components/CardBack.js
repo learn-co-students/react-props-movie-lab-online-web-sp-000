@@ -20,7 +20,7 @@ export default class CardBack extends Component {
   }
 
   generateGenreElement = () => {
-    genres = this.props.genres
+    let genres = this.props.genres
     return genres.map(item => <p>{item}</p>)
   }
 
